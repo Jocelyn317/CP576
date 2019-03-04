@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>   
+    <head>
+        <meta charset="utf-8">
+        <title>Notes/Dropbox Page</title>
+        <link rel="stylesheet" href="css/project.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body>
+    <div class="icon-bar">
+        <img class="logo-img" src="img/postit.png">
+        <a style="font-size: 20px;">Jocelyn Zhao</a>
+        <a href="#"><i class="fa fa-user"></i></a>
+        <a href="#"><i class="fa fa-commenting"></i></a> 
+        <a href="#"><i class="fa fa-home"></i></a> 
+    </div>
+        
+    <div class="row">
+      <div class="column">
+        <h2>Class notes/materials</h2>
+        <table class="notes" id="notes">
+            <tr>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td><a href="submit.html">Chapter 1</a></td>
+            </tr>
+            <tr>
+                <td><a href="submit.html">Chapter 2</a></td>
+            </tr>
+            <tr>
+                <td><a href="submit.html">Chapter 3</a></td>
+            </tr>
+        </table>
+        <input type="button" onClick="addRow();" style="font-size:16px;" value="+"/>
+      </div>
+      <div class="column">
+        <h2>Dropbox</h2>
+        <table class="notes" id="dropbox">
+            <tr>
+                <th>Assignment</th>
+                <th>Due Date</th>
+            </tr>
+            <tr>
+                <td><a href="submit.html">Assignment 1</a></td>
+                <td>Sept 1</td>
+            </tr>
+            <tr>
+                <td><a href="submit.html">Assignment 2</a></td>
+                <td>Sept 1</td>
+            </tr>
+            <tr>
+                <td><a href="submit.html">Assignment 3</a></td>
+                <td>Sept 1</td>
+            </tr>
+        </table>
+        <input type="button" onClick="addRow2();" style="font-size:16px;" value="+"/>
+      </div>
+    </div>
+        
+    <script>
+    function addRow(){
+        var oTable = document.getElementById("notes");
+        var tBodies = notes.tBodies;
+        var tbody = tBodies[0];
+        var tr = tbody.insertRow(tbody.rows.length);
+        var td_1 = tr.insertCell(0);
+        td_1.innerHTML = "<div contenteditable='true'>Notes Title</div>";
+    }
+    function addRow2(){
+        var oTable = document.getElementById("dropbox");
+        var tBodies = dropbox.tBodies;
+        var tbody = tBodies[0];
+        var tr = tbody.insertRow(tbody.rows.length);
+        var td_1 = tr.insertCell(0);
+        td_1.innerHTML = "<div contenteditable='true'>Assignment Title</div>";
+        var td_2 = tr.insertCell(1);
+        td_2.innerHTML = "<div contenteditable='true'>Due Date</div>";
+    }
+    </script>
+    </body>
+</html>
